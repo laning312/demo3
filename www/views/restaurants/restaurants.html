@@ -1,0 +1,13 @@
+<ion-view>
+    <ion-content>
+        <div class="list card" ng-repeat="restaurant in restaurants">
+            <div class="item">
+                <h2>{{restaurant.name}}</h2>
+                <p>{{restaurant.city}}, {{restaurant.address}}</p>
+            </div>
+            <div class="item item-image">
+                <img ng-src="{{restaurant.image_url}}" alt="">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
