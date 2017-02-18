@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view title="Local Restaurants">
     <ion-content>
         <div class="list card" ng-repeat="restaurant in restaurants">
             <div class="item">
@@ -9,5 +9,8 @@
                 <img ng-src="{{restaurant.image_url}}" alt="">
             </div>
         </div>
+
+        <ion-infinite-scroll on-infinite="getRestaurants()" ng-if="total > page"
+        immediate-check="false"></ion-infinite-scroll>
     </ion-content>
 </ion-view>
